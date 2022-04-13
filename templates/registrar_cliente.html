@@ -1,0 +1,45 @@
+<html>
+ <head>
+   <meta charset="UTF-8">
+     <title>ingresar </title>
+     <link rel="stylesheet" href="/static/style.css">
+ </head>
+ <body>
+   <header>
+    
+   </header>
+   <nav>
+     <h3>tienda SJJT</h3>
+    <ul>
+      <li>
+       <a href="/"><h3>inicio</h3></a>
+      </li>
+      <li>
+       <a href="registrar"><h3>ingresar cliente</h3></a>
+      </li>
+      <li>
+       <a href="actualizar"><h3>actualizar datos</h3></a>
+      </li>
+      <li>
+       <a href="datos"><h3>datos</h3></a>
+      </li>
+    </ul>
+   </nav>
+  <hr>
+  <form action="agregar_persona" method="POST">
+    <input type="text" name="documento" placeholder="Documento" required>
+    <input type="text" name="Nombre" placeholder="Nombre" required>
+    <input type="text" name="Telefono" placeholder="Telefono" required>
+    <input type="text" name="Saldo" placeholder="Saldo" required>
+    <button>
+      enviar datos 
+    </button>
+  
+  {% if data!=underfined %}
+  <h2>personas registrada correctamente</h2>
+
+  {%else%}
+  <h3>no hay ningun cliente registrado, diligencie el formulario</h3>
+  {%endif%}
+ </body>
+</html>

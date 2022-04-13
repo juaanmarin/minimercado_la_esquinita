@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/Stylea.css">
+    <title>actualizar datos</title>
+</head>
+<body>
+    <h1>actualiza datos</h1>
+    <nav>
+        <h3>tienda SJJT</h3>
+       <ul>
+         <li>
+          <a href="/"><h3>inicio</h3></a>
+         </li>
+         <li>
+          <a href="registrar"><h3>ingresar cliente</h3></a>
+         </li>
+         <li>
+          <a href="actualizar"><h3>actualizar datos</h3></a>
+         </li>
+         <li>
+          <a href="datos"><h3>datos</h3></a>
+         </li>
+       </ul>
+      </nav>
+      <section>
+        <form action="/validar" method="POST">
+          <input type="text" name="documento" placeholder="Documento" required>
+          <button>Buscar</button>
+        </form>
+        {%if data!=underfined%}
+          {%for datos in data%}
+            <form action="/actualizar" method="POST">
+              <h3>{{datos}}</h3>
+          {%endfor%}
+            <input type="text" name="nombreN" placeholder="Nombre nuevo">
+            <input type="text" name="telNuevo" placeholder="Telefono Nuevo">
+            <input type="text" name="saldoN" placeholder="saldo Nuevo">
+              <button type="submit" name="actualiza" value={{data[0]}}>Actualizar</button>
+              {{lista}}
+            </form>
+
+        {%else%}
+          <h3>Ingrese un documento</h3>
+        {%endif%}
+      </section>
+</body>
+</html>

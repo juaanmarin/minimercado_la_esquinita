@@ -1,0 +1,37 @@
+body{
+    background-image: url(/static/images/fondo\ de\ la\ tienda.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height : 370px;
+}
+nav ul{
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.158);
+    
+}
+nav ul li a{
+    text-decoration: none;
+
+}
+h3{
+    color: white;
+    
+}
+table{border-collapse:collapse ;}
+th,tr,td{
+    border: 1px solid black;
+    width: 150px;
+    height: 45px;
+    vertical-align: middle;
+    text-align: center;
+}
+th{
+    color: white;
+    background-color: rgb(0, 0, 0);
+}
+
+tr:nth-child(odd) td{
+    background-color: white;
+}

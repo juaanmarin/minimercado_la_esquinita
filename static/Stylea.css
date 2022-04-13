@@ -1,0 +1,21 @@
+body{
+    background-image: url(/static/images/fondo\ de\ la\ tienda.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height : 370px;
+}
+nav ul{
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.158);
+    
+}
+nav ul li a{
+    text-decoration: none;
+
+}
+h3{
+    color: white;
+    
+}

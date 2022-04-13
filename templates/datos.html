@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/Styled.css">
+    <title>datos</title>
+</head>
+<body>
+    <nav>
+        <h3>tienda SJJT</h3>
+       <ul>
+         <li>
+          <a href="/"><h3>inicio</h3></a>
+         </li>
+         <li>
+          <a href="registrar"><h3>ingresar cliente</h3></a>
+         </li>
+         <li>
+          <a href="actualizar"><h3>actualizar datos</h3></a>
+         </li>
+         <li>
+          <a href="datos"><h3>datos</h3></a>
+         </li>
+       </ul>
+      </nav>
+      <section>
+        {% if data!=underfined %}
+        <h2>personas registradas</h2>
+        <table>
+          <tr>
+            {% for titulo in titulos_tabla %}
+            <th>{{titulo}}</th>
+            {%endfor%}
+          </tr>
+          {%for filas in data%}
+          <tr>
+            {%for columna in filas %}
+            <td>{{columna}}</td>
+            {%endfor%}
+          </tr>
+          {%endfor%}
+        </table>
+        {%else%}
+        <h3>por favor, diligencie el formulario</h3>
+        {%endif%}
+      </section>
+</body>
+</html>
